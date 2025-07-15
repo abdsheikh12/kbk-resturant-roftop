@@ -1,0 +1,144 @@
+ * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+ /* Prevent all horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Background Section */
+.bg {
+  background-image: url('bb6.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.558);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Ensure hero content is above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Rotate animation for image */
+.rotate {
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar Link Style */
+.nav-text {
+  color: rgb(255, 196, 0) !important;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.nav-text:hover {
+  color: white !important;
+}
+
+/* Optional Button Styling */
+.btn-nav {
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: rgb(255, 196, 0) !important;
+  border: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-nav:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+
+.hero-section {
+  background-color: rgb(255, 196, 0);
+  border-radius: 60px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+
+}.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a; /* Stronger contrast */
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #3d3d3d; /* Slightly muted for paragraph */
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+
+
+.hero-buttons .btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background-color: #333;
+}
+
+.hero-buttons .btn-outline {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  font-weight: 500;
+}
+
+.hero-buttons .btn-outline:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+/* Prevent AOS overflows */
+.custom-width {
+  width: 100%;
+}
+

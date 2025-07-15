@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Table | KBK Rooftop Restaurant</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg w-100 bg-dark">
+  <div class="container">
+    <a class="navbar-brand text-light" href="index.html">
+      <img class="rounded-circle" src="kb.jpeg" alt="Logo" height="60" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link nav-text text-light" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-text text-light" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-text text-light" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item ms-2">
+          <a href="book.html" class="btn btn-warning text-dark fw-bold px-2 px-md-4 active">BOOK A TABLE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Book a Table Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center" data-aos="fade-up">
+      <div class="col-lg-7">
+        <h2 class="fw-bold text-dark mb-4 text-center">Book a Table at KBK Rooftop Restaurant</h2>
+        <p class="text-muted mb-5 text-center">
+          Reserve your spot to enjoy delicious meals and a beautiful rooftop ambiance. Fill out the form below.
+        </p>
+
+        <form action="#" method="POST" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label fw-semibold">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="+92 300 1234567"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="date" class="form-label fw-semibold">Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              name="date"
+              required
+              min="<?php echo date('Y-m-d'); ?>"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="time" class="form-label fw-semibold">Time</label>
+            <input
+              type="time"
+              class="form-control"
+              id="time"
+              name="time"
+              required
+              min="10:00"
+              max="22:00"
+            />
+            <div class="form-text">We are open from 10:00 AM to 10:00 PM</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="guests" class="form-label fw-semibold">Number of Guests</label>
+            <select class="form-select" id="guests" name="guests" required>
+              <option value="" selected disabled>Select guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6+">6+ Guests</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="requests" class="form-label fw-semibold">Special Requests</label>
+            <textarea
+              class="form-control"
+              id="requests"
+              name="requests"
+              rows="4"
+              placeholder="Any special requests or requirements?"
+            ></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-warning fw-bold px-5">Reserve Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white bg-dark pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Logo & About -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+        <h5 class="fw-bold mb-3 text-warning d-flex align-items-center">
+          <img src="kb.jpeg" alt="" height="50" class="rounded-circle me-2" />
+          KBK Rooftop Restaurant
+        </h5>
+        <p class="text-white-50">We serve hot, fresh, and delicious meals at your doorstep. Your cravings, our mission!</p>
+        <div class="mt-3 d-flex align-items-center">
+          <a href="#" class="text-white me-3"><img src="facebook.png" alt="Facebook" height="24" /></a>
+          <a href="#" class="text-white me-3"><img src="instagram.png" alt="Instagram" height="24" /></a>
+          <a href="#" class="text-white"><img src="youtube.png" alt="YouTube" height="28" /></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+        <h6 class="fw-bold mb-3 text-warning">Menu</h6>
+        <ul class="list-unstyled text-white-50">
+          <li><a href="#" class="text-decoration-none text-white-50">Burgers</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Pizzas</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Wraps</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Fries</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Pasta</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <h6 class="fw-bold mb-3 text-warning">Support</h6>
+        <ul class="list-unstyled text-white-50">
+          <li><a href="#" class="text-decoration-none text-white-50">FAQs</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Privacy Policy</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Terms & Conditions</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50">Help Center</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <h6 class="fw-bold mb-3 text-warning">Contact Us</h6>
+        <p class="text-white-50 mb-2"><i class="bi bi-geo-alt-fill me-2 text-warning"></i>Karachi, Pakistan</p>
+        <p class="text-white-50 mb-2"><i class="bi bi-telephone-fill me-2 text-warning"></i>+92 300 1234567</p>
+        <p class="text-white-50"><i class="bi bi-envelope-fill me-2 text-warning"></i>support@foodieexpress.com</p>
+      </div>
+
+    </div>
+
+    <div class="text-center border-top pt-3 mt-4 text-white-50" data-aos="fade-up" data-aos-delay="400">
+      &copy; 2025 <span class="text-warning">KBK Rooftop Restaurant</span>. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
